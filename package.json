@@ -2,19 +2,38 @@
   "name": "react-meme-generator",
   "version": "1.0.0",
   "description": "Meme generator web app built with React.",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdevero/react-meme-generator.git"
+  },
+  "homepage": "https://github.com/alexdevero/react-meme-generator#readme",
+  "bugs": {
+    "url": "https://github.com/alexdevero/react-meme-generator/issues"
+  },
+  "author": {
+    "name": "Alex Devero",
+    "url": "https://alexdevero.com/"
+  },
+  "engines": {
+    "node": ">=11.0.0",
+    "npm": ">=6.0",
+    "yarn": ">=1.16.0"
+  },
   "keywords": [
     "generator",
     "meme",
     "react",
     "react-js"
   ],
-  "main": "src/index.tsx",
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
   ],
+  "main": "src/index.tsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
