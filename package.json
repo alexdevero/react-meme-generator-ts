@@ -1,0 +1,35 @@
+{
+  "name": "react-meme-generator",
+  "version": "1.0.0",
+  "description": "Meme generator web app built with React.",
+  "keywords": [
+    "generator",
+    "meme",
+    "react",
+    "react-js"
+  ],
+  "main": "src/index.tsx",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "dom-to-image-more": "2.8.0",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-scripts": "3.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
+    "typescript": "3.6.4"
+  }
+}
