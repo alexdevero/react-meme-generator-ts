@@ -26,31 +26,40 @@ function App() {
 
   // Fetch images from https://api.imgflip.com/get_memes
   async function fetchImage() {
+    // Get the memes
     const imgData = await fetch('https://api.imgflip.com/get_memes').then(res => res.json()).catch(err => console.error(err))
     const { memes } = await imgData.data
 
+    // Update images state
     await setImages(memes)
+
+    // Update activeImage state
     await setActiveImage(memes[0].url)
   }
 
   // Handle input elements
   function handleInputChange(event) {
     if (event.target.name === 'text-top') {
+      // Update textTop state
       setTextTop(event.target.value)
     } else {
+      // Update textBottom state
       setTextBottom(event.target.value)
     }
   }
 
   // Choose random images from images fetched from api.imgflip.com
   function handleImageChange() {
+    // Choose random image
     const image = images[Math.floor(Math.random() * images.length)]
 
+    // Update activeImage state
     setActiveImage(image.url)
   }
 
   // Handle image upload via file input
   function handleImageInputChange(event) {
+    // Update activeImage state
     setActiveImage(window.URL.createObjectURL(event.target.files[0]))
   }
 
@@ -79,14 +88,16 @@ function App() {
 
   // Handle resetting the meme generator/removing existing pictures
   function handleMemeReset() {
+    // Remove existing child node inside result container (generated meme image)
     resultContainerRef.current.removeChild(resultContainerRef.current.childNodes[0])
 
+    // Update state for isMemeGenerated
     setIsMemeGenerated(false)
   }
 
   // Fetch images from https://api.imgflip.com/get_memes when app mounts
-  // and when app re-renders (change of image, image reset/removal)
   React.useEffect(() => {
+    // Call fetchImage method
     fetchImage()
   }, [])
 
