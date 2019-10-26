@@ -37,6 +37,10 @@ function App() {
     setActiveImage(image.url)
   }
 
+  function handleImageInputChange(event) {
+    setActiveImage(window.URL.createObjectURL(event.target.files[0]))
+  }
+
   function handleMemeGeneration() {
     domtoimage.toPng(document.querySelector('.content')).then((dataUrl) => {
         const img = new Image()
@@ -66,6 +70,7 @@ function App() {
       <Form
         textTop={textTop}
         textBottom={textBottom}
+        handleImageInputChange={handleImageInputChange}
         handleInputChange={handleInputChange}
         handleImageChange={handleImageChange}
         handleMemeGeneration={handleMemeGeneration}
@@ -75,8 +80,8 @@ function App() {
 
       <Content
         activeImage={activeImage}
-        textTop={textTop}
         textBottom={textBottom}
+        textTop={textTop}
       />
 
       <Result />
