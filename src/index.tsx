@@ -9,6 +9,8 @@ import Result from './components/result'
 import './styles/styles.css'
 
 function App() {
+  let resultContainerRef = React.useRef<HTMLElement | null>(null)
+
   const [images, setImages] = React.useState([])
   const [activeImage, setActiveImage] = React.useState('')
   const [textTop, setTextTop] = React.useState('')
@@ -42,6 +44,12 @@ function App() {
   }
 
   function handleMemeGeneration() {
+    // Remove any existing images
+    if (resultContainerRef.current.childNodes.length > 0) {
+      resultContainerRef.current.innerHTML = ''
+    }
+
+    // Generate meme image from the content of 'content' div
     domtoimage.toPng(document.querySelector('.content')).then((dataUrl) => {
         const img = new Image()
         const container = document.querySelector('.result')
@@ -84,7 +92,7 @@ function App() {
         textTop={textTop}
       />
 
-      <Result />
+      <Result resultContainerRef={resultContainerRef} />
     </div>
   )
 }

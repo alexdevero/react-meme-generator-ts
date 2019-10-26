@@ -1,8 +1,12 @@
 import * as React from 'react'
 
-const Result = () => {
+interface ResultInterface {
+  resultContainerRef: React.RefObject<any>;
+}
+
+const Result = (props: ResultInterface) => {
   return (
-    <div className="result"></div>
+    <div ref={props.resultContainerRef} className="result"></div>
   )
 }
 
