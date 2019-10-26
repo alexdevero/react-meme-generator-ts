@@ -1,7 +1,7 @@
 {
-  "name": "react-meme-generator",
+  "name": "react-meme-generator-ts",
   "version": "1.0.0",
-  "description": "Meme generator web app built with React.",
+  "description": "Meme generator web app built with React, React hooks and TypeScript.",
   "license": "MIT",
   "private": false,
   "repository": {
