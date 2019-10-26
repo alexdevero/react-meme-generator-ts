@@ -9,6 +9,7 @@ import Result from './components/result'
 import './styles/styles.css'
 
 function App() {
+  let contentContainerRef = React.useRef<HTMLElement | null>(null)
   let resultContainerRef = React.useRef<HTMLElement | null>(null)
 
   const [images, setImages] = React.useState([])
@@ -50,7 +51,7 @@ function App() {
     }
 
     // Generate meme image from the content of 'content' div
-    domtoimage.toPng(document.querySelector('.content')).then((dataUrl) => {
+    domtoimage.toPng(contentContainerRef.current).then((dataUrl) => {
         const img = new Image()
 
         img.src = dataUrl
@@ -86,6 +87,7 @@ function App() {
 
       <Content
         activeImage={activeImage}
+        contentContainerRef={contentContainerRef}
         textBottom={textBottom}
         textTop={textTop}
       />
