@@ -1,3 +1,4 @@
+/* Default styles */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -14,6 +15,7 @@ body {
   font: 1rem sans-serif;
 }
 
+/* Content */
 .content {
   position: relative;
   display: flex;
