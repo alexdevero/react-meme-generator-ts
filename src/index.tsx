@@ -46,25 +46,23 @@ function App() {
   function handleMemeGeneration() {
     // Remove any existing images
     if (resultContainerRef.current.childNodes.length > 0) {
-      resultContainerRef.current.innerHTML = ''
+      resultContainerRef.current.removeChild(resultContainerRef.current.childNodes[0])
     }
 
     // Generate meme image from the content of 'content' div
     domtoimage.toPng(document.querySelector('.content')).then((dataUrl) => {
         const img = new Image()
-        const container = document.querySelector('.result')
 
         img.src = dataUrl
-        container.appendChild(img)
+
+        resultContainerRef.current.appendChild(img)
 
         setIsMemeGenerated(true)
     })
   }
 
   function handleMemeReset() {
-    const container = document.querySelector('.result')
-
-    container.removeChild(container.childNodes[0])
+    resultContainerRef.current.removeChild(resultContainerRef.current.childNodes[0])
 
     setIsMemeGenerated(false)
   }
