@@ -71,7 +71,7 @@ h2 {
 }
 
 .form__inputs input,
-.form__btns button  {
+.form__btns .btn  {
   border-radius: 2px;
 }
 
@@ -87,7 +87,7 @@ h2 {
 }
 
 .form__inputs input + input,
-.form__btns button + button {
+.form__btns .btn + .btn {
   margin-left: 12px;
 }
 
@@ -95,7 +95,7 @@ h2 {
   justify-content: center;
 }
 
-.form__btns button {
+.form__btns .btn {
   padding: 8px 12px;
   border: 0;
   cursor: pointer;
