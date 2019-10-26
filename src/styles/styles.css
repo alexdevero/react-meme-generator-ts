@@ -14,13 +14,12 @@ body {
   font: 1rem sans-serif;
 }
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 .content {
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
   margin-top: 16px;
 }
 
@@ -118,12 +117,4 @@ h2 {
 
 .btn-danger:hover {
   background: #b02324;
-}
-
-/* Content */
-.content {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  justify-content: center;
 }
