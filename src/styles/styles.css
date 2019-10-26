@@ -103,6 +103,7 @@ h2 {
   transition: background .25s ease-in-out;
 }
 
+/* Buttons */
 .btn-primary {
   background: #0984e3;
 }
@@ -117,4 +118,12 @@ h2 {
 
 .btn-danger:hover {
   background: #b02324;
+}
+
+/* Content */
+.content {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
 }
