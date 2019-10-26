@@ -5,6 +5,7 @@ interface FormInterface {
   textBottom: string;
   textTop: string;
   handleImageChange: () => void;
+  handleImageInputChange: (event: React.ChangeEvent) => void;
   handleInputChange: (event: React.ChangeEvent) => void;
   handleMemeGeneration: () => void;
   handleMemeReset: () => void;
@@ -32,15 +33,23 @@ const Form = (props: FormInterface) => {
 
       <div className="form__btns">
         <button
-          className="btn-primary"
+          className="btn btn-primary"
           type="button"
           onClick={props.handleImageChange}
         >
           Change image
         </button>
 
+        <label
+          className="btn btn-primary"
+          htmlFor="fileInput"
+        >
+          Load image
+          <input id="fileInput" name="fileInput" type="file" accept=".jpg, .jpeg, .png" onChange={props.handleImageInputChange} hidden />
+        </label>
+
         <button
-          className="btn-primary"
+          className="btn btn-primary"
           type="button"
           onClick={props.handleMemeGeneration}
         >
@@ -48,7 +57,7 @@ const Form = (props: FormInterface) => {
         </button>
 
         {props.isMemeGenerated && <button
-          className="btn-danger"
+          className="btn btn-danger"
           type="button"
           onClick={props.handleMemeReset}
         >
