@@ -5,7 +5,7 @@
 ![Prerequisite](https://img.shields.io/badge/yarn-%3E%3D1.16.0-blue.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/alexdevero/react-meme-generator#readme)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/alexdevero/react-meme-generator/graphs/commit-activity)
-[![License: MIT](https://img.shields.io/github/license/alexdevero/React Meme Generator)](https://github.com/alexdevero/react-meme-generator/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/alexdevero/react-meme-generator-ts)](https://github.com/alexdevero/react-meme-generator/blob/master/LICENSE)
 [![Twitter: alexdevero](https://img.shields.io/twitter/follow/alexdevero.svg?style=social)](https://twitter.com/alexdevero)
 
 > Meme generator web app built with React.
